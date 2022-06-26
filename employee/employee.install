@@ -1,0 +1,44 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for File module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function employee_schema() {
+    $schema['employeeform'] = array(
+      'description' => 'Track where a file is used.',
+      'fields' => array(
+        'id' => array(
+          'description' => 'ID.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+        'country' => array(
+          'description' => 'Country',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ),
+        'city' => array(
+            'description' => 'City',
+            'type' => 'varchar',
+            'length' => 255,
+            'not null' => TRUE,
+          ),
+        'timezones' => array(
+          'description' => 'timezone',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ),
+      ),
+      'primary key' => array(
+        'id'
+      ),
+    );
+    return $schema;
+  }

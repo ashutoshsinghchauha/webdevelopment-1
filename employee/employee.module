@@ -1,0 +1,14 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function employee_theme($existing,$type,$theme,$path) {
+  return [
+    'employee-block'=>[
+        'variables'=>[
+    	'records'=> Null,
+        'form'=>Null,
+        ],
+    ],
+  ];
+}

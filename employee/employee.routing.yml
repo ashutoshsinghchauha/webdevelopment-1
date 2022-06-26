@@ -1,0 +1,7 @@
+employee.form:
+  path: 'employee/myForm'
+  defaults:
+    _form: '\Drupal\employee\Form\EmployeeForm'
+    _title: 'Simple custom form example'
+  requirements:
+    _permission: 'access content'
